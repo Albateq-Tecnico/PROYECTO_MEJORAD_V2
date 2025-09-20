@@ -11,9 +11,9 @@ st.set_page_config(page_title="Análisis de Crecimiento de Aves", layout="wide")
 
 # Cargar el logo
 try:
-    logo = Image.open('ARCHIVOS/log_PEQ.png')
+    logo = Image.open('log_PEQ.png')
 except FileNotFoundError:
-    st.error("No se encontró el archivo del logo en la ruta 'ARCHIVOS/log_PEQ.png'")
+    st.error("No se encontró el archivo del logo en la ruta 'log_PEQ.png'")
     logo = None
 
 # Funciones para cargar los datos con caché para mejorar el rendimiento
@@ -26,9 +26,9 @@ def load_data(file_path):
         st.error(f"Error: No se encontró el archivo {file_path}. Asegúrate de que esté en la carpeta 'ARCHIVOS'.")
         return None
 
-df_guia = load_data('ARCHIVOS/ROSS_COBB_HUBBARD_2025.csv')
-df_poly_coeffs = load_data('ARCHIVOS/Cons_Acum_Peso.csv')
-df_poly_coeffs_15 = load_data('ARCHIVOS/Cons_Acum_Peso_15.csv')
+df_guia = load_data('ROSS_COBB_HUBBARD_2025.csv')
+df_poly_coeffs = load_data('Cons_Acum_Peso.csv')
+df_poly_coeffs_15 = load_data('Cons_Acum_Peso_15.csv')
 
 # --- Encabezado de la Aplicación ---
 
